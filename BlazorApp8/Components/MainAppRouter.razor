@@ -1,0 +1,15 @@
+﻿@using BlazorApp8.Components.Test
+
+@attribute [RenderModeServer]
+
+<Router AppAssembly="@typeof(Program).Assembly">
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(TestLayout1)" @rendermode="@RenderMode.Server"/>
+    </Found>
+    <NotFound>
+        <PageTitle/>
+        <LayoutView Layout="@typeof(TestLayout1)">
+            <p role="alert"/>
+        </LayoutView>
+    </NotFound>
+</Router>

@@ -1,0 +1,23 @@
+﻿@page "/Test1"
+@using BlazorApp8.Components.Test
+@layout TestLayout1
+
+<h1>Counter 1</h1>
+
+<p role="status">Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">counter++</button>
+
+<br/><br/>
+
+<NavLink href="/Test2">Go to /Test2</NavLink>
+
+@code {
+    private int currentCount;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+
+}
